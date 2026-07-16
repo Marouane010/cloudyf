@@ -7,13 +7,17 @@ on:
 permissions:
   id-token: write
   contents: read
+  packages: write   # requis pour pousser sur GHCR
+
+env:
+  IMAGE: ghcr.io/marouane010/cloudyf   # GHCR exige la casse minuscule
 
 jobs:
-  scan-and-build:
+  scan-build-push:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }   # gitleaks scanne tout l'historique
+        with: { fetch-depth: 0 }
 
       - name: Secrets scan (gitleaks)
         uses: gitleaks/gitleaks-action@v2
@@ -21,12 +25,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -t cloudyf:${{ github.sha }} .
+        run: docker build -t ${{ env.IMAGE }}:${{ github.sha }} .
 
       - name: Vulnerability scan (Trivy) — bloquant si CRITICAL
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: cloudyf:${{ github.sha }}
+          image-ref: ${{ env.IMAGE }}:${{ github.sha }}
           exit-code: '1'
           severity: CRITICAL
           ignore-unfixed: true
+
+      - name: Login GHCR (token éphémère du run)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push (uniquement si les scans sont verts)
+        run: docker push ${{ env.IMAGE }}:${{ github.sha }}
