@@ -1,0 +1,22 @@
+name: oidc-test
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # requis pour demander le token OIDC
+  contents: read
+
+jobs:
+  prove-oidc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login via OIDC (zero secret)
+        uses: azure/login@v2
+        with:
+          client-id: <CLIENT_ID_id-seclab-cicd>
+          tenant-id: 413600cf-bd4e-4c7c-8a61-69e73cddf731
+          subscription-id: 13df671f-a63d-4845-a227-e5ddf2035839
+          allow-no-subscriptions: true
+
+      - name: Prove authenticated identity
+        run: az account show -o table || az ad signed-in-user show 2>/dev/null || echo "Token exchange OK"
