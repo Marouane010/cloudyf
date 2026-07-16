@@ -24,7 +24,7 @@ jobs:
         run: docker build -t cloudyf:${{ github.sha }} .
 
       - name: Vulnerability scan (Trivy) — bloquant si CRITICAL
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: cloudyf:${{ github.sha }}
           exit-code: '1'
