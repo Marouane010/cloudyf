@@ -1,0 +1,32 @@
+name: secure-pipeline
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  scan-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }   # gitleaks scanne tout l'historique
+
+      - name: Secrets scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build image
+        run: docker build -t cloudyf:${{ github.sha }} .
+
+      - name: Vulnerability scan (Trivy) — bloquant si CRITICAL
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: cloudyf:${{ github.sha }}
+          exit-code: '1'
+          severity: CRITICAL
+          ignore-unfixed: true
