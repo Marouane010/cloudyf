@@ -15,8 +15,7 @@ jobs:
         with:
           client-id: ab531174-9ece-4700-842b-28f459c7a701
           tenant-id: 413600cf-bd4e-4c7c-8a61-69e73cddf731
-          subscription-id: 13df671f-a63d-4845-a227-e5ddf2035839
           allow-no-subscriptions: true
 
       - name: Prove authenticated identity
-        run: az account show -o table || az ad signed-in-user show 2>/dev/null || echo "Token exchange OK"
+        run: az account list --all -o table && echo "=== OIDC federation OK, identity authenticated, zero RBAC, zero secret ==="
