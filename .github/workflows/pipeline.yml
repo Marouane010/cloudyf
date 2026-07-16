@@ -13,6 +13,29 @@ env:
   IMAGE: ghcr.io/marouane010/cloudyf   # GHCR exige la casse minuscule
 
 jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: scan-build-push   # jamais de deploy si un scan a échoué
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login via OIDC (subscription visible depuis le rôle)
+        uses: azure/login@v2
+        with:
+          client-id: ab531174-9ece-4700-842b-28f459c7a701
+          tenant-id: 413600cf-bd4e-4c7c-8a61-69e73cddf731
+          subscription-id: 13df671f-a63d-4845-a227-e5ddf2035839
+
+      - name: Get AKS credentials
+        run: az aks get-credentials -g rg-seclab-aks -n aks-seclab
+
+      - name: Inject image tag (SHA du commit courant)
+        run: sed -i "s|IMAGE_TAG|${{ github.sha }}|" k8s/seclab-k8s.yaml
+
+      - name: Deploy
+        run: |
+          kubectl apply -f k8s/
+          kubectl rollout status deployment/nginx -n app --timeout=180s
   scan-build-push:
     runs-on: ubuntu-latest
     steps:
@@ -44,3 +67,4 @@ jobs:
 
       - name: Push (uniquement si les scans sont verts)
         run: docker push ${{ env.IMAGE }}:${{ github.sha }}
+  
