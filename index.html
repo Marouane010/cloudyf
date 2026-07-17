@@ -3,80 +3,335 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLOUDYF - Votre hébergeur cloud moderne</title>
+  <meta name="description" content="CLOUDYF propose un cloud européen performant, sécurisé et simple à déployer pour vos sites, applications et infrastructures critiques.">
+  <meta name="theme-color" content="#050711">
+  <title>CLOUDYF — Le cloud qui accélère vos ambitions</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1>CLOUDYF</h1>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#offres">Offres</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="CLOUDYF, accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7.4 18.5h9.2a4.4 4.4 0 0 0 .2-8.8A5.6 5.6 0 0 0 6.1 8.1a5.2 5.2 0 0 0 1.3 10.4Z" stroke="currentColor" stroke-width="2"/><path d="m9.4 13.1 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-word">CLOUD<span>YF</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navigation"><span></span></button>
+
+      <ul class="nav-links" id="navigation">
+        <li><a href="#services">Solutions</a></li>
+        <li><a href="#securite">Sécurité</a></li>
+        <li><a href="#offres">Tarifs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary btn-small" href="connexion.html">Connexion</a>
+        <a class="btn btn-primary btn-small" href="inscription.html">Démarrer gratuitement</a>
+      </div>
     </div>
   </header>
 
-  <section id="accueil" class="hero">
-    <div class="container">
-      <h1>L’essor du cloud commence ici</h1>
-      <p>Hébergez, sécurisez et propulsez vos projets avec une infrastructure puissante et écoresponsable.</p>
-      <a href="#offres" class="btn">Voir nos offres</a>
-    </div>
-  </section>
+  <main id="contenu">
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Infrastructure cloud nouvelle génération</p>
+          <h1>Votre cloud.<br><span class="gradient-text">Sans compromis.</span></h1>
+          <p>Déployez vos sites et applications sur une infrastructure européenne rapide, souveraine et protégée 24/7. CLOUDYF transforme la complexité du cloud en avantage compétitif.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="inscription.html">
+              Lancer mon projet
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="#services">
+              Découvrir la plateforme
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m8 5 8 7-8 7V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <ul class="hero-proof">
+            <li><span class="check-dot">✓</span>Essai gratuit 14 jours</li>
+            <li><span class="check-dot">✓</span>Aucune carte bancaire</li>
+            <li><span class="check-dot">✓</span>Migration accompagnée</li>
+          </ul>
+        </div>
 
-  <section id="services">
-    <div class="container">
-      <h2>Nos Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Hébergement Web</h3>
-          <p>Des performances garanties, un uptime de 99,99% et une assistance réactive.</p>
-        </div>
-        <div class="card">
-          <h3>Cloud Privé</h3>
-          <p>Une infrastructure dédiée à vos besoins avec chiffrement de bout en bout.</p>
-        </div>
-        <div class="card">
-          <h3>Sauvegardes Automatisées</h3>
-          <p>Vos données sont protégées en continu avec des snapshots journaliers.</p>
+        <div class="cloud-console reveal" aria-label="Aperçu du tableau de bord CLOUDYF">
+          <div class="console-glow"></div>
+          <div class="console-card">
+            <div class="console-top">
+              <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span class="live-badge">Systèmes opérationnels</span>
+            </div>
+            <div class="console-screen">
+              <div class="console-heading">
+                <div><small>Infrastructure globale</small><strong>Production Europe</strong></div>
+                <span class="status-pill">En ligne</span>
+              </div>
+              <div class="metric-row">
+                <div class="metric"><span>Disponibilité</span><strong>99,99%</strong></div>
+                <div class="metric"><span>Latence moyenne</span><strong>18 ms</strong></div>
+                <div class="metric"><span>Menaces bloquées</span><strong>2 847</strong></div>
+              </div>
+              <div class="chart" aria-hidden="true">
+                <svg viewBox="0 0 420 128" preserveAspectRatio="none">
+                  <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#75f4ff" stop-opacity=".38"/><stop offset="1" stop-color="#75f4ff" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0 106 C35 95 48 102 78 79 S132 87 166 53 S224 70 258 41 S318 58 351 28 S390 32 420 12 V128 H0Z" fill="url(#area)"/>
+                  <path d="M0 106 C35 95 48 102 78 79 S132 87 166 53 S224 70 258 41 S318 58 351 28 S390 32 420 12" fill="none" stroke="#75f4ff" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="server-list">
+                <div class="server-item"><span class="server-icon">●</span><div><strong>api-production</strong><small>Paris · 8 vCPU · 32 Go RAM</small></div><span class="status-pill">Stable</span></div>
+                <div class="server-item"><span class="server-icon">●</span><div><strong>database-primary</strong><small>Francfort · Réplication active</small></div><span class="status-pill">Stable</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-card one">
+            <span class="float-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4.5 6v5.2c0 4.6 3.1 8.8 7.5 9.8 4.4-1 7.5-5.2 7.5-9.8V6L12 3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span><strong>Protection active</strong><span>WAF + Anti-DDoS</span></span>
+          </div>
+          <div class="float-card two">
+            <span class="float-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 16.5A4.5 4.5 0 0 1 6.4 7.7 6 6 0 0 1 17.7 9 3.8 3.8 0 0 1 18 16.5H5Z" stroke="currentColor" stroke-width="2"/><path d="M9 13h6M12 10v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <span><strong>Déploiement réussi</strong><span>En 42 secondes</span></span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="offres">
-    <div class="container">
-      <h2>Comparez nos Offres</h2>
-      <div class="offers">
-        <div class="offer">
-          <h3>Essentiel</h3>
-          <p>3€/mois</p>
-          <p>Hébergement 50 Go</p>
-          <p>1 base de données</p>
-        </div>
-        <div class="offer">
-          <h3>Pro</h3>
-          <p>9€/mois</p>
-          <p>Stockage 200 Go, 3 bases, Support 24/7</p>
-        </div>
-        <div class="offer">
-          <h3>Entreprise</h3>
-          <p>Sur devis</p>
-          <p>Cloud privé, sécurité renforcée, assistance dédiée</p>
-        </div>
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <span>Déjà adopté par des équipes exigeantes</span>
+        <div class="logo-row" aria-label="Exemples de clients"><span>NEXORA</span><span>FLOWLAB</span><span>ASTERA</span><span>VERTEX</span><span>QUANTUM</span></div>
       </div>
     </div>
-  </section>
 
-  <footer>
+    <section class="section">
+      <div class="container">
+        <div class="stats-grid reveal">
+          <div class="stat-card"><strong>99,99%</strong><span>de disponibilité garantie</span></div>
+          <div class="stat-card"><strong>&lt; 20 ms</strong><span>de latence moyenne en Europe</span></div>
+          <div class="stat-card"><strong>24/7</strong><span>supervision et support expert</span></div>
+          <div class="stat-card"><strong>100%</strong><span>données hébergées en Europe</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Une plateforme, tous vos besoins</p>
+          <h2>Concentrez-vous sur votre produit.<br><span class="gradient-text">Nous gérons l’infrastructure.</span></h2>
+          <p>Des briques cloud performantes, pensées pour fonctionner ensemble sans configuration interminable.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 18.5h14M7 15V7.5A2.5 2.5 0 0 1 9.5 5h5A2.5 2.5 0 0 1 17 7.5V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9.5 10h5M9.5 13h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3>Hébergement ultra-rapide</h3>
+            <p>SSD NVMe, cache intelligent et CDN mondial pour des temps de chargement qui font la différence.</p>
+            <span class="feature-tag">Performance optimisée →</span>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z" stroke="currentColor" stroke-width="2"/><path d="m4.5 7.8 7.5 4.3 7.5-4.3M12 12v8.4" stroke="currentColor" stroke-width="2"/></svg></span>
+            <h3>Cloud privé managé</h3>
+            <p>Une infrastructure dédiée et isolée, dimensionnée pour vos enjeux métiers et réglementaires.</p>
+            <span class="feature-tag">Contrôle total →</span>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3>Compute à la demande</h3>
+            <p>Ajoutez CPU, mémoire et instances en quelques secondes, puis ne payez que ce que vous utilisez.</p>
+            <span class="feature-tag">Évolutivité instantanée →</span>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="7" ry="3" stroke="currentColor" stroke-width="2"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" stroke="currentColor" stroke-width="2"/></svg></span>
+            <h3>Bases de données managées</h3>
+            <p>PostgreSQL, MySQL et Redis sécurisés, répliqués et supervisés automatiquement.</p>
+            <span class="feature-tag">Haute disponibilité →</span>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4M7.5 9.5h9M7.5 13h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3>Observabilité complète</h3>
+            <p>Métriques, logs et alertes réunis dans un tableau de bord clair pour anticiper chaque incident.</p>
+            <span class="feature-tag">Visibilité en temps réel →</span>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20a8 8 0 1 0-8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 4v5h5M9 12l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Sauvegardes immuables</h3>
+            <p>Snapshots automatisés, restauration en un clic et réplication multi-zone pour ne rien perdre.</p>
+            <span class="feature-tag">Résilience intégrée →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="securite">
+      <div class="container split-grid">
+        <div class="security-visual reveal" aria-hidden="true">
+          <div class="security-orbit o1"><span></span></div>
+          <div class="security-orbit o2"><span></span></div>
+          <div class="security-orbit o3"><span></span></div>
+          <div class="security-core"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4.5 6v5.2c0 4.6 3.1 8.8 7.5 9.8 4.4-1 7.5-5.2 7.5-9.8V6L12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 11v-1a3 3 0 0 1 6 0v1M8 11h8v6H8z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        </div>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sécurité par conception</p>
+          <h2>Votre infrastructure est une forteresse. <span class="gradient-text">Pas une option.</span></h2>
+          <p>Chaque couche de CLOUDYF est conçue pour protéger vos données, vos applications et votre réputation.</p>
+          <ul class="benefit-list">
+            <li><span class="check-dot">✓</span><div><strong>Chiffrement de bout en bout</strong><span>Données chiffrées au repos et en transit avec gestion sécurisée des clés.</span></div></li>
+            <li><span class="check-dot">✓</span><div><strong>Protection DDoS et WAF intégrée</strong><span>Filtrage automatique des attaques avant qu’elles n’atteignent vos services.</span></div></li>
+            <li><span class="check-dot">✓</span><div><strong>Supervision SOC 24/7</strong><span>Détection, analyse et réponse aux événements de sécurité en continu.</span></div></li>
+            <li><span class="check-dot">✓</span><div><strong>Conformité européenne</strong><span>Hébergement en Europe et principes RGPD appliqués par défaut.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="offres">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Tarification transparente</p>
+          <h2>Une offre pour chaque <span class="gradient-text">étape de votre croissance.</span></h2>
+          <p>Commencez petit, évoluez sans migration complexe. Aucun frais caché, aucun engagement.</p>
+        </div>
+
+        <div class="pricing-toolbar reveal">
+          <span>Mensuel</span>
+          <button class="switch" type="button" role="switch" aria-checked="false" aria-label="Activer la facturation annuelle"></button>
+          <span>Annuel</span>
+          <span class="save-badge">2 mois offerts</span>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3>Essentiel</h3>
+            <p>Pour lancer un site ou un premier projet.</p>
+            <div class="price"><strong data-monthly="3€" data-yearly="2,50€">3€</strong><span data-billing-label>/mois</span></div>
+            <ul class="price-features">
+              <li><span class="check-dot">✓</span>50 Go SSD NVMe</li>
+              <li><span class="check-dot">✓</span>1 site et 1 base de données</li>
+              <li><span class="check-dot">✓</span>Certificat SSL automatique</li>
+              <li><span class="check-dot">✓</span>Sauvegarde quotidienne</li>
+              <li><span class="check-dot">✓</span>Support par email</li>
+            </ul>
+            <a class="btn btn-secondary" href="inscription.html">Choisir Essentiel</a>
+          </article>
+
+          <article class="price-card featured reveal">
+            <span class="popular-badge">Le plus choisi</span>
+            <h3>Pro</h3>
+            <p>Pour les applications et équipes en croissance.</p>
+            <div class="price"><strong data-monthly="9€" data-yearly="7,50€">9€</strong><span data-billing-label>/mois</span></div>
+            <ul class="price-features">
+              <li><span class="check-dot">✓</span>200 Go SSD NVMe</li>
+              <li><span class="check-dot">✓</span>10 sites et 5 bases de données</li>
+              <li><span class="check-dot">✓</span>CDN et cache avancé</li>
+              <li><span class="check-dot">✓</span>Sauvegardes toutes les 6 heures</li>
+              <li><span class="check-dot">✓</span>Support prioritaire 24/7</li>
+            </ul>
+            <a class="btn btn-primary" href="inscription.html">Démarrer avec Pro</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Entreprise</h3>
+            <p>Pour les infrastructures critiques et réglementées.</p>
+            <div class="price"><strong>Sur devis</strong></div>
+            <ul class="price-features">
+              <li><span class="check-dot">✓</span>Cloud privé dédié</li>
+              <li><span class="check-dot">✓</span>Architecture haute disponibilité</li>
+              <li><span class="check-dot">✓</span>SLA et sécurité sur mesure</li>
+              <li><span class="check-dot">✓</span>Migration et audit inclus</li>
+              <li><span class="check-dot">✓</span>Ingénieur dédié</li>
+            </ul>
+            <a class="btn btn-secondary" href="contact.html">Parler à un expert</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Ils nous font confiance</p>
+          <h2>Le cloud qui se fait oublier.<br><span class="gradient-text">Parce qu’il fonctionne.</span></h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="quote-card reveal">
+            <div class="quote-mark">“</div>
+            <blockquote>Nous avons divisé nos temps de déploiement par quatre tout en améliorant la stabilité. L’équipe CLOUDYF comprend les enjeux techniques autant que les enjeux business.</blockquote>
+            <div class="person"><span class="avatar">AM</span><span><strong>Amine M.</strong><span>CTO, Nexora</span></span></div>
+          </article>
+          <div class="mini-quotes">
+            <article class="mini-quote reveal"><p>« La migration s’est faite sans interruption. Le support est rapide, humain et réellement compétent. »</p><div class="person"><span class="avatar">SL</span><span><strong>Sophie L.</strong><span>Fondatrice, Flowlab</span></span></div></article>
+            <article class="mini-quote reveal"><p>« Enfin une interface cloud claire. Nous savons exactement ce qui tourne, ce que cela coûte et comment cela performe. »</p><div class="person"><span class="avatar">YD</span><span><strong>Yanis D.</strong><span>Lead DevOps, Astera</span></span></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2>Tout ce qu’il faut savoir <span class="gradient-text">avant de décoller.</span></h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item is-open">
+            <button class="faq-question" type="button" aria-expanded="true"><span>Puis-je migrer un site ou une application existante ?</span><span>+</span></button>
+            <div class="faq-answer"><div><p>Oui. Nos équipes peuvent vous accompagner dans l’audit, la préparation et la migration de vos services afin de limiter les risques et l’interruption.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>Où sont hébergées mes données ?</span><span>+</span></button>
+            <div class="faq-answer"><div><p>Les données sont hébergées dans des centres de données européens. Vous pouvez choisir votre zone de déploiement selon vos besoins de performance et de conformité.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>Puis-je changer d’offre à tout moment ?</span><span>+</span></button>
+            <div class="faq-answer"><div><p>Oui. Vous pouvez augmenter ou réduire vos ressources depuis votre espace client. Les changements sont appliqués rapidement sans migration complexe.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>Que comprend l’essai gratuit ?</span><span>+</span></button>
+            <div class="faq-answer"><div><p>L’essai donne accès à la plateforme et aux principales fonctionnalités pendant 14 jours, sans carte bancaire. Vous décidez ensuite de poursuivre ou non.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>Le support est-il réellement disponible 24/7 ?</span><span>+</span></button>
+            <div class="faq-answer"><div><p>La supervision de l’infrastructure est permanente. Le niveau de support humain dépend de l’offre choisie, avec une priorité renforcée pour les offres Pro et Entreprise.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div><h2>Prêt à construire sur une base solide ?</h2><p>Créez votre espace CLOUDYF en quelques minutes ou échangez avec un expert pour concevoir une architecture sur mesure.</p></div>
+          <div class="cta-actions"><a class="btn btn-primary" href="inscription.html">Essayer gratuitement</a><a class="btn btn-secondary" href="contact.html">Parler à un expert</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 CLOUDYF - Hébergement Cloud Fiable et Sécurisé.</p>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.4 18.5h9.2a4.4 4.4 0 0 0 .2-8.8A5.6 5.6 0 0 0 6.1 8.1a5.2 5.2 0 0 0 1.3 10.4Z" stroke="currentColor" stroke-width="2"/><path d="m9.4 13.1 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-word">CLOUD<span>YF</span></span></a>
+          <p>Le cloud européen simple, performant et sécurisé pour les projets qui veulent aller plus loin.</p>
+        </div>
+        <div class="footer-column"><h3>Plateforme</h3><a href="#services">Solutions</a><a href="#securite">Sécurité</a><a href="#offres">Tarifs</a><a href="#faq">FAQ</a></div>
+        <div class="footer-column"><h3>Entreprise</h3><a href="contact.html">Nous contacter</a><a href="contact.html">Partenaires</a><a href="contact.html">Carrières</a><a href="contact.html">Presse</a></div>
+        <div class="footer-column"><h3>Accès</h3><a href="connexion.html">Connexion</a><a href="inscription.html">Créer un compte</a><a href="contact.html">Support</a><a href="#">Statut des services</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year></span> CLOUDYF. Tous droits réservés.</span><span class="footer-status">Tous les systèmes sont opérationnels</span></div>
     </div>
   </footer>
 </body>

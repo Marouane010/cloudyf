@@ -3,41 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription - CLOUDYF</title>
+  <meta name="description" content="Créez gratuitement votre compte CLOUDYF et lancez votre première infrastructure cloud en quelques minutes.">
+  <meta name="theme-color" content="#050711">
+  <title>Créer un compte — CLOUDYF</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1>CLOUDYF</h1>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#offres">Offres</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="page-shell">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header is-scrolled">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="CLOUDYF, accueil"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.4 18.5h9.2a4.4 4.4 0 0 0 .2-8.8A5.6 5.6 0 0 0 6.1 8.1a5.2 5.2 0 0 0 1.3 10.4Z" stroke="currentColor" stroke-width="2"/><path d="m9.4 13.1 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-word">CLOUD<span>YF</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navigation"><span></span></button>
+      <ul class="nav-links" id="navigation"><li><a href="index.html#services">Solutions</a></li><li><a href="index.html#securite">Sécurité</a></li><li><a href="index.html#offres">Tarifs</a></li><li><a href="contact.html">Contact</a></li></ul>
+      <div class="nav-actions"><a class="btn btn-secondary btn-small" href="connexion.html">Connexion</a></div>
     </div>
   </header>
 
-  <section id="inscription">
-  <div class="container">
-    <h2>Inscription</h2>
-    <form class="form">
-      <input type="text" placeholder="Nom complet">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Mot de passe">
-      <button type="submit">Créer un compte</button>
-    </form>
-  </div>
-</section>
+  <main id="contenu" class="auth-section">
+    <div class="container auth-grid">
+      <div class="auth-copy reveal">
+        <div class="auth-visual"></div>
+        <p class="eyebrow">14 jours pour tout tester</p>
+        <h1>Votre prochain projet mérite <span class="gradient-text">une meilleure base.</span></h1>
+        <p>Créez votre espace, déployez une première instance et découvrez une plateforme cloud pensée pour aller vite sans sacrifier la sécurité.</p>
+        <ul class="auth-points">
+          <li><span class="check-dot">✓</span>Aucune carte bancaire requise</li>
+          <li><span class="check-dot">✓</span>Configuration guidée en quelques minutes</li>
+          <li><span class="check-dot">✓</span>Support d’onboarding inclus</li>
+        </ul>
+      </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 CLOUDYF - Hébergement Cloud Fiable et Sécurisé.</p>
+      <section class="form-card reveal" aria-labelledby="signup-title">
+        <div class="form-card-header"><h2 id="signup-title">Créer votre compte</h2><p>Commencez gratuitement, sans engagement.</p></div>
+        <form data-demo-form="signup">
+          <div class="form-row">
+            <div class="form-group"><label for="firstname">Prénom</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2"/></svg><input id="firstname" name="firstname" type="text" placeholder="Prénom" autocomplete="given-name" required></div></div>
+            <div class="form-group"><label for="lastname">Nom</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2"/></svg><input id="lastname" name="lastname" type="text" placeholder="Nom" autocomplete="family-name" required></div></div>
+          </div>
+          <div class="form-group"><label for="email">Adresse email professionnelle</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><input id="email" name="email" type="email" placeholder="vous@entreprise.com" autocomplete="email" required></div></div>
+          <div class="form-group"><label for="company">Entreprise <span style="color:var(--muted);font-weight:500">(facultatif)</span></label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M8 20v-5h8v5M8 9h.01M12 9h.01M16 9h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="company" name="company" type="text" placeholder="Nom de votre entreprise" autocomplete="organization"></div></div>
+          <div class="form-group"><label for="password">Mot de passe</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2M5 10h14v10H5z" stroke="currentColor" stroke-width="2"/><path d="M12 14v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="password" name="password" type="password" placeholder="8 caractères minimum" autocomplete="new-password" minlength="8" data-password-strength required><button class="password-toggle" type="button" aria-label="Afficher le mot de passe" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="2"/></svg></button></div><div class="password-strength" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p class="password-hint">Utilisez des majuscules, chiffres et caractères spéciaux.</p></div>
+          <div class="form-meta"><label class="checkbox"><input type="checkbox" required><span>J’accepte les <a href="#">conditions d’utilisation</a> et la <a href="#">politique de confidentialité</a>.</span></label></div>
+          <button class="btn btn-primary" type="submit">Créer mon espace <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <p class="form-status" role="status">Formulaire validé. La création de compte nécessite maintenant un back-end.</p>
+        </form>
+        <p class="form-footer">Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
+      </section>
     </div>
-  </footer>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-bottom" style="margin-top:0;padding-top:0;border-top:0"><span>© <span data-year></span> CLOUDYF.</span><span class="footer-status">Vos données restent en Europe</span></div></footer>
+  <div class="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><div><strong data-toast-title></strong><p data-toast-message></p></div><button type="button" aria-label="Fermer">×</button></div>
 </body>
 </html>

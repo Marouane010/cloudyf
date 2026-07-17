@@ -3,41 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - CLOUDYF</title>
+  <meta name="description" content="Contactez les experts CLOUDYF pour concevoir votre architecture cloud, préparer une migration ou obtenir une assistance.">
+  <meta name="theme-color" content="#050711">
+  <title>Contact — CLOUDYF</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1>CLOUDYF</h1>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#offres">Offres</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="page-shell">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header is-scrolled">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="CLOUDYF, accueil"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.4 18.5h9.2a4.4 4.4 0 0 0 .2-8.8A5.6 5.6 0 0 0 6.1 8.1a5.2 5.2 0 0 0 1.3 10.4Z" stroke="currentColor" stroke-width="2"/><path d="m9.4 13.1 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-word">CLOUD<span>YF</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navigation"><span></span></button>
+      <ul class="nav-links" id="navigation"><li><a href="index.html#services">Solutions</a></li><li><a href="index.html#securite">Sécurité</a></li><li><a href="index.html#offres">Tarifs</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul>
+      <div class="nav-actions"><a class="btn btn-secondary btn-small" href="connexion.html">Connexion</a><a class="btn btn-primary btn-small" href="inscription.html">Démarrer</a></div>
     </div>
   </header>
 
-  <section id="contact">
-  <div class="container">
-    <h2>Contact</h2>
-    <form class="form">
-      <input type="text" placeholder="Votre nom">
-      <input type="email" placeholder="Votre email">
-      <textarea placeholder="Votre message"></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </div>
-</section>
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-intro reveal">
+          <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span>/</span><span>Contact</span></nav>
+          <p class="eyebrow">Parlons de votre projet</p>
+          <h1>Une question, une migration ou <span class="gradient-text">un projet ambitieux ?</span></h1>
+          <p>Décrivez-nous votre besoin. Un expert CLOUDYF vous répondra avec une approche claire, concrète et adaptée à votre contexte.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 CLOUDYF - Hébergement Cloud Fiable et Sécurisé.</p>
-    </div>
-  </footer>
+    <section class="section" style="padding-top:30px">
+      <div class="container contact-layout">
+        <aside class="contact-info reveal" aria-label="Coordonnées">
+          <div class="contact-card"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="2"/></svg></span><div><h3>Équipe commerciale</h3><a href="mailto:bonjour@cloudyf.fr">bonjour@cloudyf.fr</a><p>Pour vos projets, migrations et devis.</p></div></div>
+          <div class="contact-card"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18.5a7.5 7.5 0 1 1 12 0" stroke="currentColor" stroke-width="2"/><path d="M4 15v3a2 2 0 0 0 2 2h2v-6H6a2 2 0 0 0-2 1ZM20 15v3a2 2 0 0 1-2 2h-2v-6h2a2 2 0 0 1 2 1Z" stroke="currentColor" stroke-width="2"/></svg></span><div><h3>Support technique</h3><a href="mailto:support@cloudyf.fr">support@cloudyf.fr</a><p>Pour les clients et incidents en cours.</p></div></div>
+          <div class="contact-card"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5 7-12a7 7 0 1 0-14 0c0 7 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="2"/></svg></span><div><h3>Infrastructure européenne</h3><p>Paris · Francfort · Amsterdam</p><p>Données hébergées dans l’Union européenne.</p></div></div>
+          <div class="contact-note"><strong>Temps de réponse moyen : moins de 4 heures ouvrées.</strong><br>Les urgences clients sont traitées selon le niveau de support souscrit.</div>
+        </aside>
+
+        <section class="form-card reveal" aria-labelledby="contact-title">
+          <div class="form-card-header"><h2 id="contact-title">Écrivez-nous</h2><p>Quelques informations suffisent pour orienter votre demande vers la bonne équipe.</p></div>
+          <form data-demo-form="contact">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Nom complet</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 20a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2"/></svg><input id="name" name="name" type="text" placeholder="Votre nom" autocomplete="name" required></div></div>
+              <div class="form-group"><label for="company">Entreprise</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M8 20v-5h8v5" stroke="currentColor" stroke-width="2"/></svg><input id="company" name="company" type="text" placeholder="Votre entreprise" autocomplete="organization"></div></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="email">Adresse email</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="2"/></svg><input id="email" name="email" type="email" placeholder="vous@entreprise.com" autocomplete="email" required></div></div>
+              <div class="form-group"><label for="subject">Objet de votre demande</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h12v16H6zM9 8h6M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><select id="subject" name="subject" required><option value="" selected disabled>Choisir un sujet</option><option>Projet cloud</option><option>Migration</option><option>Demande de devis</option><option>Support technique</option><option>Partenariat</option><option>Autre demande</option></select></div></div>
+            </div>
+            <div class="form-group"><label for="message">Votre message</label><div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="top:25px"><path d="M4 5h16v12H8l-4 3V5Z" stroke="currentColor" stroke-width="2"/><path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><textarea id="message" name="message" placeholder="Décrivez votre besoin, votre infrastructure actuelle et vos contraintes principales…" required></textarea></div></div>
+            <div class="form-meta"><label class="checkbox"><input type="checkbox" required><span>J’accepte que mes informations soient utilisées pour traiter ma demande.</span></label></div>
+            <button class="btn btn-primary" type="submit">Envoyer ma demande <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 11 18-8-8 18-2-8-8-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button>
+            <p class="form-status" role="status">Formulaire validé. L’envoi nécessite maintenant une connexion à votre service de messagerie.</p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-bottom" style="margin-top:0;padding-top:0;border-top:0"><span>© <span data-year></span> CLOUDYF.</span><span class="footer-status">Tous les systèmes sont opérationnels</span></div></div></footer>
+  <div class="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><div><strong data-toast-title></strong><p data-toast-message></p></div><button type="button" aria-label="Fermer">×</button></div>
 </body>
 </html>

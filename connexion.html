@@ -3,41 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion - CLOUDYF</title>
+  <meta name="description" content="Connectez-vous à votre espace CLOUDYF pour gérer vos infrastructures cloud.">
+  <meta name="theme-color" content="#050711">
+  <title>Connexion — CLOUDYF</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1>CLOUDYF</h1>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#offres">Offres</a></li>
-          <li><a href="connexion.html">Connexion</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="page-shell">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header is-scrolled">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="CLOUDYF, accueil"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.4 18.5h9.2a4.4 4.4 0 0 0 .2-8.8A5.6 5.6 0 0 0 6.1 8.1a5.2 5.2 0 0 0 1.3 10.4Z" stroke="currentColor" stroke-width="2"/><path d="m9.4 13.1 1.8 1.8 3.8-4.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-word">CLOUD<span>YF</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navigation"><span></span></button>
+      <ul class="nav-links" id="navigation"><li><a href="index.html#services">Solutions</a></li><li><a href="index.html#securite">Sécurité</a></li><li><a href="index.html#offres">Tarifs</a></li><li><a href="contact.html">Contact</a></li></ul>
+      <div class="nav-actions"><a class="btn btn-primary btn-small" href="inscription.html">Créer un compte</a></div>
     </div>
   </header>
 
-  <section id="connexion">
-  <div class="container">
-    <h2>Connexion</h2>
-    <form class="form">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Mot de passe">
-      <button type="submit">Se connecter</button>
-      <p>Pas encore inscrit ? <a href="inscription.html">Créer un compte</a></p>
-    </form>
-  </div>
-</section>
+  <main id="contenu" class="auth-section">
+    <div class="container auth-grid">
+      <div class="auth-copy reveal">
+        <div class="auth-visual"></div>
+        <p class="eyebrow">Heureux de vous revoir</p>
+        <h1>Reprenez le contrôle de <span class="gradient-text">votre cloud.</span></h1>
+        <p>Accédez à vos projets, surveillez vos performances et déployez vos prochaines versions depuis une interface unique.</p>
+        <ul class="auth-points">
+          <li><span class="check-dot">✓</span>Vue temps réel de vos infrastructures</li>
+          <li><span class="check-dot">✓</span>Déploiements et sauvegardes en un clic</li>
+          <li><span class="check-dot">✓</span>Alertes de sécurité centralisées</li>
+        </ul>
+      </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 CLOUDYF - Hébergement Cloud Fiable et Sécurisé.</p>
+      <section class="form-card reveal" aria-labelledby="login-title">
+        <div class="form-card-header"><h2 id="login-title">Connexion</h2><p>Entrez vos identifiants pour accéder à votre espace.</p></div>
+        <form data-demo-form="login">
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><input id="email" name="email" type="email" placeholder="vous@entreprise.com" autocomplete="email" required></div>
+          </div>
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <div class="input-wrap"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2M5 10h14v10H5z" stroke="currentColor" stroke-width="2"/><path d="M12 14v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="password" name="password" type="password" placeholder="Votre mot de passe" autocomplete="current-password" required><button class="password-toggle" type="button" aria-label="Afficher le mot de passe" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="2"/></svg></button></div>
+          </div>
+          <div class="form-meta"><label class="checkbox"><input type="checkbox" name="remember"><span>Rester connecté</span></label><a href="contact.html">Mot de passe oublié ?</a></div>
+          <button class="btn btn-primary" type="submit">Se connecter <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <p class="form-status" role="status">Formulaire validé. La connexion nécessite maintenant un back-end.</p>
+        </form>
+        <p class="form-footer">Nouveau sur CLOUDYF ? <a href="inscription.html">Créer un compte gratuitement</a></p>
+      </section>
     </div>
-  </footer>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-bottom" style="margin-top:0;padding-top:0;border-top:0"><span>© <span data-year></span> CLOUDYF.</span><span class="footer-status">Connexion chiffrée</span></div></footer>
+  <div class="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><div><strong data-toast-title></strong><p data-toast-message></p></div><button type="button" aria-label="Fermer">×</button></div>
 </body>
 </html>
